@@ -22,15 +22,20 @@ namespace PolySpatial.Samples
         public delegate void OnSliderUpdatedCallback(float _newState);
         public OnSliderUpdatedCallback OnSliderUpdated;
 
-
         public float currentPercentage = 0.5f;
         bool selected;
         public AudioSource CTA_Clip;
         public float clipDelay = 5;
 
+        public GameObject sliderUI;
+
         void Start()
         {
             m_BoxColliderSizeX = GetComponent<BoxCollider>().size.x;
+            if (sliderUI != null)
+            {
+                sliderUI.SetActive(false);
+            }  
         }
 
         private void OnEnable()
@@ -50,6 +55,11 @@ namespace PolySpatial.Samples
 
         public override void Press(Vector3 position)
         {
+            if (sliderUI != null)
+            {
+                sliderUI.SetActive(false);
+            }   
+
             selected = true;
 
             base.Press(position);
@@ -147,8 +157,13 @@ namespace PolySpatial.Samples
             yield return StartCoroutine(DoAnimate(10, 1));
 
             StartCoroutine(Play_CTA_Clip(3));
-    
+
             yield return StartCoroutine(DoAnimate(5, 0.5f));
+
+            if (sliderUI != null)
+            {
+                sliderUI.SetActive(true);
+            }               
         }
 
         public void AnimateToStart()
