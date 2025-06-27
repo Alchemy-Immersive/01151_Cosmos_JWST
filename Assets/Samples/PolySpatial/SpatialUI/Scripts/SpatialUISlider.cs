@@ -122,11 +122,33 @@ namespace PolySpatial.Samples
             Invoke("DelayedAnimate", 16.5f);
         }
 
+        public void AnimateToCentreNoDelay()
+        {
+            Invoke("AnimateNoDelay", 0f);
+        }
+
         void DelayedAnimate()
         {
             StartCoroutine(DoAnimate(3, centrePoint));
             StartCoroutine(Play_CTA_Clip(clipDelay - 15.5f));
             Debug.Log("animating slider");
+        }
+
+        void AnimateNoDelay()
+        {
+            StartCoroutine(AnimateToStartThenCenter());
+
+            //StartCoroutine(Play_CTA_Clip(clipDelay - 15.5f));
+            Debug.Log("animating slider");
+        }
+
+        IEnumerator AnimateToStartThenCenter()
+        {
+            yield return StartCoroutine(DoAnimate(10, 1));
+
+            StartCoroutine(Play_CTA_Clip(3));
+    
+            yield return StartCoroutine(DoAnimate(5, 0.5f));
         }
 
         public void AnimateToStart()
