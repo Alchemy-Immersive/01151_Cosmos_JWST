@@ -144,8 +144,9 @@ namespace PolySpatial.Samples
 
         IEnumerator AnimateToStartThenCenter()
         {
-            yield return StartCoroutine(DoAnimate(10, 1));
-
+            //yield return StartCoroutine(DoAnimate(10, 1));
+            yield return StartCoroutine(DoAnimate(10, centrePoint));
+            
             StartCoroutine(Play_CTA_Clip(3));
     
             yield return StartCoroutine(DoAnimate(5, 0.5f));
