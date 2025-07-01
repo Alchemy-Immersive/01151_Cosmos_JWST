@@ -628,7 +628,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5717847910798413894}
-  m_LocalRotation: {x: -0.15219812, y: 0.9558964, z: 0.18457726, w: 0.17037944}
+  m_LocalRotation: {x: -0.15219928, y: 0.955895, z: 0.18458012, w: 0.17038305}
   m_LocalPosition: {x: 0, y: 0, z: 0.00699}
   m_LocalScale: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_ConstrainProportionsScale: 1
@@ -1002,7 +1002,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: DeepField_Open
+        m_MethodName: ActiveGalacticNucleus_Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

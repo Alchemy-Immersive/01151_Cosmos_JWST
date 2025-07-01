@@ -143,6 +143,11 @@ public class DeepFieldHotspots : MonoBehaviour
         lensingTimeline.gameObject.SetActive(false);
     }
 
+    public void StopSource()
+    {
+        source.Stop();
+    }
+
 
     private IEnumerator ReverseTimeline(PlayableDirector timeline, bool disappear, float delay = 0)
     {
@@ -153,7 +158,7 @@ public class DeepFieldHotspots : MonoBehaviour
         timeline.Stop();
 
         timeline.time = dt;
-        
+
 
         while (dt > 0.1f)
         {

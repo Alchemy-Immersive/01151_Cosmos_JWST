@@ -128,9 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lensRadius: 2.6
   zoomMats:
+  - {fileID: 2100000, guid: 78a46a428689645969e0b1ef8a6841a6, type: 2}
   - {fileID: 2100000, guid: f31f116064c2f4b85a989adb247497c9, type: 2}
   - {fileID: 2100000, guid: a4c958bf5af1e41f183af0c58c757ca0, type: 2}
-  - {fileID: 2100000, guid: 78a46a428689645969e0b1ef8a6841a6, type: 2}
   - {fileID: 2100000, guid: 4db3191e48b3f4bbfb536711f685957d, type: 2}
 --- !u!95 &4973908727155875330
 Animator:
@@ -4430,6 +4430,8 @@ PlayableDirector:
     value: {fileID: 1651520587524922219}
   - key: {fileID: 4923473524199671929, guid: 6ec10ae5022ca4f209c7107c8539696a, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -1966152159773341999, guid: 6ec10ae5022ca4f209c7107c8539696a, type: 2}
+    value: {fileID: 4973908727155875330}
   m_ExposedReferences:
     m_References: []
 --- !u!210 &434648126904746261
@@ -4551,7 +4553,7 @@ Animator:
   m_GameObject: {fileID: 6937416182520815592}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88e7fae22e7d24ffc87bc5eec3f93ec7, type: 2}
+  m_Controller: {fileID: 9100000, guid: d50c957c2f223452c84e23ceae1cd271, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

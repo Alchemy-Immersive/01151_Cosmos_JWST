@@ -31,21 +31,29 @@ public class AudioManager : MonoBehaviour
     public AudioSource deepfieldBgSourceLoop;
     //public AudioClip deepfieldIntro, deepfieldLoop;
 
+    [Header("Wolf Rayet")]
+    public AudioSource wolfRayetBgSource;
+    public AudioSource wolfRayetBgSourceLoop;
+
     [Header("Southern Ring Nebula")]
     public AudioSource srnBgSource;
     public AudioSource srnBgSourceLoop;
     //public AudioClip srnIntro, srnLoop;
 
+    [Header("Penguin Galaxy")]
+    public AudioSource penguinGBgSource;
+    public AudioSource penguinGBgSourceLoop;
+
     [Header("Final VO")]
     public AudioSource finalVOsource;
-    bool pocPlayed, srnPlayed, deepFieldPlayed;
+    bool pocPlayed, srnPlayed, deepFieldPlayed, penguinGplayed, wolfRPlayed, galacticNPlayed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         IntroTitleStart();
 
-        pocPlayed = srnPlayed = deepFieldPlayed = false;
+        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed =false;
     }
 
     private void Awake()
@@ -240,6 +248,27 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(AudioFade.FadeAudioSource(srnBgSourceLoop, 0.6f, 3.0f)); //quiet POC music.
     }
 
+    public void PG_Open()
+    {
+        penguinGplayed = true;
+
+        CancelInvoke();
+        GaiaSilent();
+        Debug.Log("penguin galaxy music playing");
+        //penguinGBgSource.volume = 0;
+        //penguinGBgSource.loop = false;
+        //penguinGBgSource.Play();
+        //StartCoroutine(AudioFade.FadeAudioSource(penguinGBgSource, 1f, 2.0f)); //fade in PG track
+        //Invoke("PG_Loop", penguinGBgSource.clip.length);
+    }
+
+    void PG_Loop()
+    {
+        penguinGBgSourceLoop.volume = 1;
+        penguinGBgSourceLoop.loop = true;
+        penguinGBgSourceLoop.Play();
+        StartCoroutine(AudioFade.FadeAudioSource(penguinGBgSourceLoop, 0.6f, 3.0f)); //quiet PG music.
+    }
 
     public void DeepField_Open()
     {
@@ -261,6 +290,37 @@ public class AudioManager : MonoBehaviour
         deepfieldBgSourceLoop.loop = true;
         deepfieldBgSourceLoop.Play();
         StartCoroutine(AudioFade.FadeAudioSource(deepfieldBgSourceLoop, 0.6f, 3.0f)); //quiet POC music.
+    }
+    
+    public void WolfRayet_Open()
+    {
+        wolfRPlayed = true;
+
+        CancelInvoke();
+        GaiaSilent();
+        Debug.Log("wolf rayet music playing");
+        //wolfRayetBgSource.volume = 0;
+        //wolfRayetBgSource.loop = false;
+        //wolfRayetBgSource.Play();
+       // StartCoroutine(AudioFade.FadeAudioSource(wolfRayetBgSource, 1f, 2.0f)); //fade in WR track
+        //Invoke("WolfRayet_Loop", wolfRayetBgSource.clip.length);
+    }
+
+    void WolfRayet_Loop()
+    {
+        wolfRayetBgSourceLoop.volume = 1;
+        wolfRayetBgSourceLoop.loop = true;
+        wolfRayetBgSourceLoop.Play();
+        StartCoroutine(AudioFade.FadeAudioSource(wolfRayetBgSourceLoop, 0.6f, 3.0f)); //quiet WR music.
+    }
+
+    public void ActiveGalacticNucleus_Open()
+    {
+        galacticNPlayed = true;
+
+        CancelInvoke();
+        GaiaSilent();
+        Debug.Log("active galactic nucleus music playing");
     }
 
 
@@ -298,7 +358,7 @@ public class AudioManager : MonoBehaviour
             deepfieldBgSourceLoop.Stop();
         }
 
-        if(pocPlayed && srnPlayed && deepFieldPlayed)
+        if (pocPlayed && srnPlayed && deepFieldPlayed && wolfRPlayed & penguinGplayed & galacticNPlayed)
         {
             Invoke("PlayFinalVO", 3);
         }
@@ -308,7 +368,7 @@ public class AudioManager : MonoBehaviour
     {
         finalVOsource.Play();
 
-        pocPlayed = srnPlayed = deepFieldPlayed = false;
+        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed = false;
     }
 
 }

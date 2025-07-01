@@ -162,11 +162,14 @@ namespace PolySpatial.Samples
             StartCoroutine(Play_CTA_Clip(3));
 
             yield return StartCoroutine(DoAnimate(5, 0.5f));
-            
+
+            yield return new WaitForSeconds(3);
+
             if (sliderUIButton != null)
             {
                 sliderUIButton.SetActive(true);
             }
+
         }
 
         public void AnimateToStart()

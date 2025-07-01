@@ -692,9 +692,9 @@ MonoBehaviour:
   - Order: 2
     Renderer: {fileID: 0}
     ApplyToDescendants: 1
-  - Order: 3
+  - Order: 2
     Renderer: {fileID: 0}
-    ApplyToDescendants: 0
+    ApplyToDescendants: 1
   - Order: 3
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
@@ -725,9 +725,6 @@ MonoBehaviour:
   - Order: 7
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
-  - Order: 7
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
   - Order: 8
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
@@ -744,9 +741,6 @@ MonoBehaviour:
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 9
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
-  - Order: 10
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 10
@@ -783,9 +777,6 @@ MonoBehaviour:
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 13
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
-  - Order: 14
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 14
@@ -822,6 +813,24 @@ MonoBehaviour:
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 21
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 22
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 23
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 24
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 25
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 26
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 27
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 22
