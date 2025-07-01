@@ -22,6 +22,8 @@ namespace PolySpatial.Samples
         public delegate void OnSliderUpdatedCallback(float _newState);
         public OnSliderUpdatedCallback OnSliderUpdated;
 
+        public GameObject sliderUIButton;
+
 
         public float currentPercentage = 0.5f;
         bool selected;
@@ -31,6 +33,11 @@ namespace PolySpatial.Samples
         void Start()
         {
             m_BoxColliderSizeX = GetComponent<BoxCollider>().size.x;
+
+            if (sliderUIButton != null)
+            {
+                sliderUIButton.SetActive(false);
+            }
         }
 
         private void OnEnable()
@@ -50,6 +57,11 @@ namespace PolySpatial.Samples
 
         public override void Press(Vector3 position)
         {
+            if (sliderUIButton != null)
+            {
+                sliderUIButton.SetActive(false);
+            }
+
             selected = true;
 
             base.Press(position);
@@ -146,10 +158,15 @@ namespace PolySpatial.Samples
         {
             //yield return StartCoroutine(DoAnimate(10, 1));
             yield return StartCoroutine(DoAnimate(10, centrePoint));
-            
+
             StartCoroutine(Play_CTA_Clip(3));
-    
+
             yield return StartCoroutine(DoAnimate(5, 0.5f));
+            
+            if (sliderUIButton != null)
+            {
+                sliderUIButton.SetActive(true);
+            }
         }
 
         public void AnimateToStart()
