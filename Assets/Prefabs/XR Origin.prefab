@@ -704,9 +704,6 @@ MonoBehaviour:
   - Order: 3
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
-  - Order: 3
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
   - Order: 5
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
@@ -719,12 +716,6 @@ MonoBehaviour:
   - Order: 6
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
-  - Order: 6
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
-  - Order: 7
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
   - Order: 7
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
@@ -744,12 +735,6 @@ MonoBehaviour:
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 8
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
-  - Order: 8
-    Renderer: {fileID: 0}
-    ApplyToDescendants: 0
-  - Order: 9
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
   - Order: 9
@@ -836,7 +821,10 @@ MonoBehaviour:
   - Order: 20
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
-  - Order: 20
+  - Order: 21
+    Renderer: {fileID: 0}
+    ApplyToDescendants: 0
+  - Order: 22
     Renderer: {fileID: 0}
     ApplyToDescendants: 0
 --- !u!114 &4362045206614471320
