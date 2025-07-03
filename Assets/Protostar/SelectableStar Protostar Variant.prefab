@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487375052460606540, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.001388
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 3487375052460606540, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487375052460606540, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.009983
+      value: -0.008
       objectReference: {fileID: 0}
     - target: {fileID: 3487375052460606540, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.002373
+      value: -0.006
       objectReference: {fileID: 0}
     - target: {fileID: 3487375052460606540, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -94,12 +94,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7589082559020849743, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_PressEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Protostar_Open
+      value: GalaxyCollision_Open
       objectReference: {fileID: 0}
     - target: {fileID: 7624861297730199014, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 184b7ea35a924497db51e552fd8831ae, type: 2}
+      objectReference: {fileID: 2100000, guid: b7bfa13a44cfe462ba31c5c2460b49fe, type: 2}
     - target: {fileID: 7931339476735041622, guid: 416b7904e67544624af38d11ecd94adc, type: 3}
       propertyPath: m_Mesh
       value: 
