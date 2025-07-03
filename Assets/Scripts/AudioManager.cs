@@ -46,14 +46,14 @@ public class AudioManager : MonoBehaviour
 
     [Header("Final VO")]
     public AudioSource finalVOsource;
-    bool pocPlayed, srnPlayed, deepFieldPlayed, penguinGplayed, wolfRPlayed, galacticNPlayed;
+    bool pocPlayed, srnPlayed, deepFieldPlayed, penguinGplayed, wolfRPlayed, galacticNPlayed, protostarPlayed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         IntroTitleStart();
 
-        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed =false;
+        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed = protostarPlayed = false;
     }
 
     private void Awake()
@@ -323,6 +323,15 @@ public class AudioManager : MonoBehaviour
         Debug.Log("active galactic nucleus music playing");
     }
 
+    public void Protostar_Open()
+    {
+        protostarPlayed = true;
+
+        CancelInvoke();
+        GaiaSilent();
+        Debug.Log("protostar music playing");
+    }
+
 
     public void ZoomPanelClosed()
     {
@@ -358,7 +367,7 @@ public class AudioManager : MonoBehaviour
             deepfieldBgSourceLoop.Stop();
         }
 
-        if (pocPlayed && srnPlayed && deepFieldPlayed && wolfRPlayed & penguinGplayed & galacticNPlayed)
+        if (pocPlayed && srnPlayed && deepFieldPlayed && wolfRPlayed & penguinGplayed & galacticNPlayed & protostarPlayed)
         {
             Invoke("PlayFinalVO", 3);
         }
@@ -368,7 +377,7 @@ public class AudioManager : MonoBehaviour
     {
         finalVOsource.Play();
 
-        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed = false;
+        pocPlayed = srnPlayed = deepFieldPlayed = penguinGplayed = wolfRPlayed = galacticNPlayed = protostarPlayed = false;
     }
 
 }
