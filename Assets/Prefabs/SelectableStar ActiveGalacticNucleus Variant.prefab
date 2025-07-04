@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3472407435411880558, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
+      propertyPath: m_PressEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ActiveGalacticNucleus_Open
+      objectReference: {fileID: 0}
     - target: {fileID: 3508687536392224199, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -62,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7567185818999317613, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00168
+      value: -0.00263
       objectReference: {fileID: 0}
     - target: {fileID: 7567185818999317613, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: m_LocalRotation.w
@@ -82,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7567185818999317613, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.01179
+      value: -0.014
       objectReference: {fileID: 0}
     - target: {fileID: 7567185818999317613, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00418
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 7567185818999317613, guid: 6225b1f727f1748a19ced03cc9cd9f78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
